@@ -1,13 +1,58 @@
 <template>
   <div class="home px-4 py-2">
-    <h1 class="text-center">My Calendar</h1>
 
-    <div class="col-12 d-flex mt-5 px-2">
-      <div class="col-4">forms</div>
-      <calendar-view
+    <div class="col-12 d-flex  px-2">
+
+
+      <div class="col-4 px-4 py-4 mt-5">
+
+
+   
+
+          <form  class="card px-3 py-4">
+  <div class="mb-3">
+    <h4>Schedule Event</h4>
+    <label for="exampleInputEmail1" class="form-label">Event Title</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Event Date</label>
+    <input type="date" class="form-control" id="exampleInputPassword1">
+  </div>
+  <!-- <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+        <form  class="card px-3 py-4 mt-4">
+  <div class="mb-3">
+    <h4>Plan Day</h4>
+    <label for="exampleInputEmail1" class="form-label">Select Day</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+   
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Input Activities</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <!-- <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+ 
+      </div>
+
+      <div class="col-8 py-4">
+         <h2 class="text-center">Interactive Calendar</h2>
+          <calendar-view 
         style="height: 75vh"
         :show-date="showDate"
-        class="theme-default holiday-us-traditional holiday-us-official col-8"
+        class="theme-default holiday-us-traditional holiday-us-official col-12 mt-2 py-3"
       >
         <template #header="{ headerProps }">
           <calendar-view-header
@@ -16,6 +61,8 @@
           />
         </template>
       </calendar-view>
+      </div>
+    
     </div>
   </div>
 </template>
