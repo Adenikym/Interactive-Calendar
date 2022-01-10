@@ -58,6 +58,7 @@
           <calendar-view-header
             :header-props="headerProps"
             @input="setShowDate"
+              @click-date="logDate"
           />
         </template>
       </calendar-view>
@@ -77,7 +78,8 @@ import "vue-simple-calendar/static/css/holidays-us.css";
 export default {
   name: "Home",
   data: function () {
-    return { showDate: new Date() };
+    return { showDate: new Date(),
+    selectedDate:'' };
   },
   components: {
     CalendarView,
@@ -87,6 +89,9 @@ export default {
     setShowDate(d) {
       this.showDate = d;
     },
+    logDate(date){
+// this.selectedDate= moment(date).format('YYYY-MM-DD')
+console.log(date)}
   },
 };
 </script>
